@@ -43,12 +43,11 @@ RESET_PERIPHERAL() {
     -H "x-b3-spanid: $TRACE_ID" | jq
 }
 
-RESET_PRINTER() {
+RESET_PRINTER_XD() {
   curl --connect-timeout 10 -s -X 'PUT' \
     "https://localhost/tachyon/v2/register/peripherals/category/printer/configure" \
     -H 'accept: application/json' \
     -H 'x-b3-traceid: 6dc33ac0-6c82-44va-b0a1-e05e7659d70b' \
-    -H 'x-b3-spanid: 6dc33ac0-6c82-44va-b0a1-e05e7659d70b' | jq ".peripherals | .[] .status"
 }
 
 RESET_RECYCLER() {
