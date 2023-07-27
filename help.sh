@@ -13,8 +13,9 @@ REGISTER_INFO() {
   cat /etc/lowes/config/touchpoint.json | jq '"\(.storeNumber) : \(.hostname)"'
 }
 
-GET_TIMESTAMP() {
+GET_TIMESTAMP_XD() {
   echo "$(date +"%Y-%m-%dT%H:%M:%S%z")"
+  new line added here
 }
 
 GET_REGISTER() {
